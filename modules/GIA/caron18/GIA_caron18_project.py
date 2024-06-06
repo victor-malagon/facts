@@ -1,9 +1,9 @@
 import argparse
 
-''' kopp14_project_verticallandmotion.py
+''' GIA_caron18_project.py
 
-This runs the projection stage for the vertical land motion component of the Kopp 14
-workflow.
+This runs the projection stage for the GIA contribution to relative sea-level change from Caron et al. (2018).
+
 
 Parameters:
 pipeline_id = Unique identifier for the pipeline running this code

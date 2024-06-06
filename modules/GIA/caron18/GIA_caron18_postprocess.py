@@ -11,10 +11,10 @@ from read_locationfile import ReadLocationFile
 import xarray as xr
 import dask.array as da
 
-''' kopp14_postprocess_verticallandmotion.py
+''' GIA_caron18_postprocess.py
 
-This runs the post-processing stage for the vertical land motion component of the Kopp 14
-workflow. Projections generated from this stage are site-specific.
+This runs the post-processing stage for the GIA contribution to relative sea-level change from Caron et al. (2018).
+Projections generated from this stage are site-specific.
 
 Parameters:
 nsamps = Number of samples to draw
@@ -124,6 +124,7 @@ def caron18_postprocess_GIA(nsamps, rng_seed, baseyear, pyear_start, pyear_end, 
 
 	# Produce the samples from the means and standard deviations
 	local_sl = GIAproj + np.multiply.outer(norm_inv_perm, GIAprojsd)
+	local_sl = np.array(local_sl) # saving as numpy array is extremely more efficient than dask array
 
 	# Create the xarray data structures for the localized projections
 	ncvar_attributes = {"description": "Local SLR contributions from Glacial Isostatic Adjustment according to Caron 18 workflow",

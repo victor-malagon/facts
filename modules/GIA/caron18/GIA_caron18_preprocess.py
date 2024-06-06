@@ -7,8 +7,8 @@ from netCDF4 import Dataset
 
 ''' kopp14_preprocess_verticallandmotion.py
 
-This runs the preprocessing stage for the vertical land motion component of the Kopp 14
-workflow.
+This runs the preprocessing stage for the GIA contribution to relative sea-level change from Caron et al. (2018).
+
 
 Parameters:
 pipeline_id = Unique identifier for the pipeline running this code
